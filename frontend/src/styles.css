@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-canvas text-primary antialiased dark:bg-slate-950 dark:text-slate-100;
+}
+
+.container-padded {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.surface {
+  @apply border border-slate-200 bg-white shadow-soft dark:border-slate-800 dark:bg-slate-900;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-bold text-primary transition hover:bg-green-400 disabled:cursor-not-allowed disabled:opacity-60;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-md border border-slate-300 bg-white px-5 py-3 text-sm font-bold text-primary transition hover:border-primary dark:border-slate-700 dark:bg-slate-900 dark:text-white dark:hover:border-white;
+}
+
+.input {
+  @apply w-full rounded-md border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-accent focus:ring-4 focus:ring-green-100 dark:border-slate-700 dark:bg-slate-950 dark:focus:ring-green-900/30;
+}
+
+.skeleton {
+  @apply animate-pulse rounded-md bg-slate-200 dark:bg-slate-800;
+}
