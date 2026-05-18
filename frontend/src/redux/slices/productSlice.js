@@ -24,7 +24,13 @@ const productSlice = createSlice({
         state.loading = true;
       })
       .addCase(fetchProducts.fulfilled, (state, action) => {
-        Object.assign(state, action.payload, { items: action.payload.products, loading: false });
+        const hasSearch = Boolean(action.meta.arg?.search);
+        if (!hasSearch && action.payload.products?.length === 0) {
+          const fallback = getDemoProductPage(action.meta.arg);
+          Object.assign(state, fallback, { items: fallback.products, loading: false, error: null });
+          return;
+        }
+        Object.assign(state, action.payload, { items: action.payload.products, loading: false, error: null });
       })
       .addCase(fetchProducts.rejected, (state, action) => {
         const fallback = getDemoProductPage(action.meta.arg);

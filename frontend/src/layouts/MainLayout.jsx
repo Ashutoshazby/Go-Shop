@@ -119,7 +119,7 @@ export const MainLayout = () => {
                 <button className="btn-primary shrink-0">Join</button>
               </form>
               <div className="mt-5 grid gap-2 text-sm text-slate-300">
-                <span className="flex items-center gap-2"><MapPin size={16} className="text-accent" /> Bengaluru, India</span>
+                <span className="flex items-center gap-2"><MapPin size={16} className="text-accent" /> Delhi, India</span>
                 <span className="flex items-center gap-2"><Mail size={16} className="text-accent" /> support@goshop.dev</span>
               </div>
             </div>

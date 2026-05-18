@@ -41,8 +41,8 @@ export const Shop = () => {
           <p className="mt-2 text-slate-600 dark:text-slate-300">{total} products found</p>
         </div>
         <label className="relative w-full md:w-96">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
-          <input className="input pl-10" value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Live search..." />
+          <Search className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+          <input className="input pl-12 placeholder:text-slate-400" value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Live search..." />
         </label>
       </div>
       <div className="grid gap-6 lg:grid-cols-[260px_1fr]">
